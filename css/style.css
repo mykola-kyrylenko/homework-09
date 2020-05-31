@@ -102,38 +102,30 @@ a {
     text-decoration: none;
 }
 
-[class*="col-"] {
-    padding: 0 15px;
-    /* background-color: aquamarine; */
-    background-clip: content-box;
-    /* border: 1px solid #000; */
-}
-
 .name,
 .some-description {
     text-align: center;
+    margin: 0 auto;
 }
 
 header {
-    /* background-image: url(../image/mobile/mobile.png); */
+    background-image: url(../image/mobile/mobile.png);
     background-color: #000000;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
     padding-top: 20px;
-    /* padding-bottom: 138px; */
+    padding-bottom: 138px;
 }
 
-
-
 .logo-link {
-    /* font-size: 20px; */
+    font-size: 20px;
     font-family: "Montserrat", sans-serif;
     color: rgb(255, 255, 255);
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.2;
-    /* padding-top: 116px; */
+    padding-top: 116px;
 }
 
 .sign_up {
@@ -184,48 +176,47 @@ header {
 }
 
 .central_name {
-    /* font-size: 30px; */
+    font-size: 28px;
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     color: rgba(255, 255, 255, 1);
     text-align: center;
     line-height: 1.2;
-    /* padding-top: 34px; */
+    padding-top: 34px;
 }
 
 .central_text {
-    /* font-size: 18px; */
+    font-size: 18px;
     font-family: "Roboto", serif;
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.2;
     font-weight: 300;
     text-align: center;
-    /* margin-top: 16px; */
-
+    margin-top: 16px;
 }
 
-
 .central_link {
-    display: block;
-    /* height: 40px;
-    width: 280px; */
+    height: 40px;
+    width: 280px;
     background-color: rgba(255, 78, 80, 1);
     border-radius: 20px;
-    font-size: 14px;
-    line-height: 1.2;
-    font-weight: 700;
     border: none;
     outline: none;
     font-family: "Montserrat",
         sans-serif;
     color: rgba(255, 255, 255, 1);
     cursor: pointer;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
     text-align: center;
-    /* margin-top: 20px; */
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
 }
-
-
 
 .meeting-list {
     font-size: 22px;
@@ -236,7 +227,6 @@ header {
     text-align: center;
     margin-top: 68px;
 }
-
 
 .div__for__photo {
     display: block;
@@ -304,6 +294,7 @@ header {
 }
 
 .name {
+    display: block;
     font-size: 14px;
     font-family: "Montserrat", sans-serif;
     color: rgba(51, 51, 51, 1);
@@ -314,6 +305,7 @@ header {
 }
 
 .some-description {
+    display: block;
     margin: 0 auto;
     font-size: 14px;
     font-family: "Roboto", serif;
@@ -343,76 +335,57 @@ header {
     margin-bottom: 58px;
 }
 
-@media screen and (max-width: 375px) {
-    header {
-        background-image: url(../image/mobile/mobile.png);
-        padding-bottom: 138px;
-    }
-
-    .logo-link {
-        font-size: 20px;
-        padding-top: 116px;
-    }
-
-    .central_name {
-        font-size: 30px;
-        padding-top: 34px;
-    }
-
-    .central_text {
-        font-size: 18px;
-        margin-top: 16px;
-
-    }
-
-    .central_link {
-        margin-top: 20px;
-        height: 40px;
-        width: 280px;
-    }
-
-
-}
-
-@media (max-width: 767px) {
+@media (min-width: 768px) {
     header {
         background-image: url(../image/tablet/tablet.png);
         padding-bottom: 234px;
     }
 
-    /* .logo-link {
-        font-size: 20px;
-        padding-top: 116px;
-    } */
-
-    .central_name {
-        font-size: 52px;
-        padding-top: 34px;
+    .nav-container {
+        padding-top: 20px;
     }
 
-    .central_text {
-        font-size: 18px;
-        margin-top: 16px;
-
-    }
-
-    .central_link {
-        /* margin-top: 20px; */
-        height: 40px;
-        width: 280px;
-
+    .logo-link {
+        padding-top: 0px;
     }
 
     .cards {
-        justify-content: space-between;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 39px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 
+    .card {
+        max-width: 236px;
+        padding-left: 20px;
+    }
 
-    /* .central_part {
-        margin: 0 auto;
-        text-align: center;
-    } */
+    .central_name {
+        font-size: 52px;
+        padding-top: 144px;
+    }
+
+    .central_text {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    .central_link {
+        margin-top: 30px;
+        height: 40px;
+    }
+
+    .cards {
+        margin-left: auto;
+        margin-right: auto;
+        align-items: baseline
+    }
+}
+
+@media (min-width: 960px) {
+    header {
+        background-image: url(../image/desktop/desktop.png);
+    }
 }
